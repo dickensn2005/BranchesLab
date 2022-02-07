@@ -1,0 +1,89 @@
+jupyter-ninadickens[~]> cd Testreal
+(NewBranch)jupyter-ninadickens[Testreal]> git status
+On branch NewBranch
+Your branch is up to date with 'origin/NewBranch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   something2.txt
+
+(NewBranch)jupyter-ninadickens[Testreal]> git commit -m "something2commit"
+[NewBranch 4faf8a5] something2commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 something2.txt
+(NewBranch)jupyter-ninadickens[Testreal]> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 250 bytes | 250.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dickensn2005/BranchesLab.git
+   bf5f6e9..4faf8a5  NewBranch -> NewBranch
+(NewBranch)jupyter-ninadickens[Testreal]> git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+(main)jupyter-ninadickens[Testreal]> git merge NewBranch
+Updating bf5f6e9..4faf8a5
+Fast-forward
+ something2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 something2.txt
+(main)jupyter-ninadickens[Testreal]> ls
+something2.txt  something.txt
+(main)jupyter-ninadickens[Testreal]> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+(main)jupyter-ninadickens[Testreal]> git commit -m "merge"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   something.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(main)jupyter-ninadickens[Testreal]> ls
+something2.txt  something.txt
+(main)jupyter-ninadickens[Testreal]> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+(main)jupyter-ninadickens[Testreal]> git commit -m "mergetest"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   something.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(main)jupyter-ninadickens[Testreal]> git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dickensn2005/BranchesLab.git
+   bf5f6e9..4faf8a5  main -> main
+(main)jupyter-ninadickens[Testreal]> git branch -d NewBranchDeleted branch NewBranch (was 4faf8a5).
+(main)jupyter-ninadickens[Testreal]> git push NewBranch -d NewBranch
+fatal: 'NewBranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(main)jupyter-ninadickens[Testreal]> git push BranchesLab -d NewBranch
+fatal: 'BranchesLab' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(main)jupyter-ninadickens[Testreal]> git push origin -d NewBranch
+To https://github.com/dickensn2005/BranchesLab.git
+ - [deleted]         NewBranch
+(main)jupyter-ninadickens[Testreal]> mv something.txt terminalcode.txt
+(main)jupyter-ninadickens[Testreal]> 
