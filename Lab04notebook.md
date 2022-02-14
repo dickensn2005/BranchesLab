@@ -27,11 +27,7 @@ x = np.linspace(0,10,100)
 ```
 
 ```python
-<<<<<<< HEAD
 foo = lambda x:x**2 - 137 
-=======
-
->>>>>>> ab0e04064f2dd65556019bd72f3424f83171d014
 ```
 
 ```python
