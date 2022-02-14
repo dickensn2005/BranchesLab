@@ -27,7 +27,7 @@ x = np.linspace(0,10,100)
 ```
 
 ```python
-foo = lambda x:x**2
+foo = lambda x:x**2 - 137 
 ```
 
 ```python
@@ -35,7 +35,7 @@ y = list(map(foo,x))
 ```
 
 ```python
-3+5+9
+3+5+10
 ```
 
 ```python
